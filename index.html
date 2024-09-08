@@ -30,26 +30,18 @@
     <meta property="og:type" content="website" />
 
     <!-- FAVICON FILES -->
+    <!-- <link  href="ico/favicon_black.ico" rel="apple-touch-icon" sizes="144x144" />
+    <link href="ico/favicon_black.ico" rel="apple-touch-icon" sizes="114x114" />
+    <link href="ico/favicon_black.ico" rel="apple-touch-icon" sizes="72x72" />
+    <link href="ico/favicon_black.ico" rel="apple-touch-icon" />
+    <link href="ico/favicon_black.ico" rel="shortcut icon" /> -->
+
     <link
-      href="ico/apple-touch-icon-144-precomposed.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
+      id="favicon"
+      rel="icon"
+      href="ico/favicon_white.ico"
+      type="image/png"
     />
-    <link
-      href="ico/apple-touch-icon-114-precomposed.png"
-      rel="apple-touch-icon"
-      sizes="114x114"
-    />
-    <link
-      href="ico/apple-touch-icon-72-precomposed.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="ico/apple-touch-icon-57-precomposed.png"
-      rel="apple-touch-icon"
-    />
-    <link href="ico/favicon.png" rel="shortcut icon" />
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -445,6 +437,31 @@
     <!-- end main -->
     <audio id="link" src="audio/link.mp3" preload="auto"></audio>
     <audio id="hover-audio" src="audio/hover.mp3" preload="auto"></audio>
+
+    <script>
+      // Function to change favicon based on the theme
+      function changeFavicon(mode) {
+        const favicon = document.getElementById("favicon");
+        if (mode === "dark") {
+          favicon.href = "ico/favicon_white.ico"; // Dark mode favicon
+        } else {
+          favicon.href = "ico/favicon_black.ico"; // Light mode favicon
+        }
+      }
+
+      // Check if the user has a preferred theme
+      const preferredColorScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+
+      // Set the initial favicon based on user's theme
+      changeFavicon(preferredColorScheme.matches ? "dark" : "light");
+
+      // Listen for changes in the color scheme
+      preferredColorScheme.addEventListener("change", (e) => {
+        changeFavicon(e.matches ? "dark" : "light");
+      });
+    </script>
 
     <!-- JS FILES -->
     <script src="js/jquery.min.js"></script>

@@ -1330,12 +1330,12 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #000;
+  /* background: #000; */
   position: fixed;
   left: 0;
   top: 0;
 }
-.page-header:after {
+/* .page-header:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -1344,7 +1344,7 @@ a:hover {
   top: 0;
   background: url(../images/contact.jpg);
   z-index: 1;
-}
+} */
 .page-header .inner {
   width: 100%;
   padding: 0 60px;
@@ -1405,7 +1405,7 @@ a:hover {
   left: 0;
   top: 0;
   overflow: hidden;
-  background: #000;
+  /* background: #000; */
 }
 .video-bg video {
   min-height: 100%;
@@ -1414,7 +1414,7 @@ a:hover {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.1;
+  opacity: 0.3;
   mix-blend-mode: luminosity;
 }
 

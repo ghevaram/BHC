@@ -1353,7 +1353,7 @@ a:hover {
   z-index: 3;
 }
 .page-header .inner h2 {
-  font-size: 8em;
+  font-size: 6em;
   font-weight: 800;
   line-height: 1;
   color: #fff;
@@ -2188,7 +2188,7 @@ a:hover {
   background: #fff;
 }
 .say-hello h3 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 800;
   margin-bottom: 40px;
 }
